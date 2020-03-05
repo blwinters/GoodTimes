@@ -14,6 +14,8 @@
 		B529270A240998CC0070DBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5292709240998CC0070DBAB /* Assets.xcassets */; };
 		B529270D240998CC0070DBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B529270B240998CC0070DBAB /* LaunchScreen.storyboard */; };
 		B5292718240998CC0070DBAB /* GoodTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5292717240998CC0070DBAB /* GoodTimesTests.swift */; };
+		B529272324099A020070DBAB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B529272224099A020070DBAB /* Coordinator.swift */; };
+		B529272524099A0E0070DBAB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B529272424099A0E0070DBAB /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		B5292713240998CC0070DBAB /* GoodTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5292717240998CC0070DBAB /* GoodTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTimesTests.swift; sourceTree = "<group>"; };
 		B5292719240998CC0070DBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B529272224099A020070DBAB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B529272424099A0E0070DBAB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			children = (
 				B5292700240998CA0070DBAB /* AppDelegate.swift */,
 				B5292702240998CA0070DBAB /* SceneDelegate.swift */,
+				B529272224099A020070DBAB /* Coordinator.swift */,
+				B529272424099A0E0070DBAB /* Router.swift */,
 				B5292704240998CA0070DBAB /* ViewController.swift */,
 				B5292706240998CA0070DBAB /* Main.storyboard */,
 				B5292709240998CC0070DBAB /* Assets.xcassets */,
@@ -200,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B529272324099A020070DBAB /* Coordinator.swift in Sources */,
 				B5292705240998CA0070DBAB /* ViewController.swift in Sources */,
+				B529272524099A0E0070DBAB /* Router.swift in Sources */,
 				B5292701240998CA0070DBAB /* AppDelegate.swift in Sources */,
 				B5292703240998CA0070DBAB /* SceneDelegate.swift in Sources */,
 			);
