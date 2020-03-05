@@ -13,9 +13,13 @@
 		B5292708240998CA0070DBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5292706240998CA0070DBAB /* Main.storyboard */; };
 		B529270A240998CC0070DBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5292709240998CC0070DBAB /* Assets.xcassets */; };
 		B529270D240998CC0070DBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B529270B240998CC0070DBAB /* LaunchScreen.storyboard */; };
-		B5292718240998CC0070DBAB /* GoodTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5292717240998CC0070DBAB /* GoodTimesTests.swift */; };
+		B5292718240998CC0070DBAB /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5292717240998CC0070DBAB /* AppDelegateTests.swift */; };
 		B529272324099A020070DBAB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B529272224099A020070DBAB /* Coordinator.swift */; };
 		B529272524099A0E0070DBAB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B529272424099A0E0070DBAB /* Router.swift */; };
+		B5A91ADA2411916B00F85D14 /* MockAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A91AD92411916B00F85D14 /* MockAppCoordinator.swift */; };
+		B5A91AE02411921600F85D14 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A91ADF2411921600F85D14 /* MockRouter.swift */; };
+		B5A91AE22411991500F85D14 /* ModalNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A91AE12411991500F85D14 /* ModalNavigationRouter.swift */; };
+		B5A91AE42411999400F85D14 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A91AE32411999400F85D14 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +42,14 @@
 		B529270C240998CC0070DBAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B529270E240998CC0070DBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5292713240998CC0070DBAB /* GoodTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5292717240998CC0070DBAB /* GoodTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTimesTests.swift; sourceTree = "<group>"; };
+		B5292717240998CC0070DBAB /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		B5292719240998CC0070DBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B529272224099A020070DBAB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B529272424099A0E0070DBAB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B5A91AD92411916B00F85D14 /* MockAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppCoordinator.swift; sourceTree = "<group>"; };
+		B5A91ADF2411921600F85D14 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		B5A91AE12411991500F85D14 /* ModalNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationRouter.swift; sourceTree = "<group>"; };
+		B5A91AE32411999400F85D14 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +93,8 @@
 			children = (
 				B5292700240998CA0070DBAB /* AppDelegate.swift */,
 				B5292702240998CA0070DBAB /* SceneDelegate.swift */,
-				B529272224099A020070DBAB /* Coordinator.swift */,
-				B529272424099A0E0070DBAB /* Router.swift */,
-				B5292704240998CA0070DBAB /* ViewController.swift */,
-				B5292706240998CA0070DBAB /* Main.storyboard */,
+				B5A91ADB2411918000F85D14 /* Coordinators */,
+				B5A91ADD2411919000F85D14 /* ViewControllers */,
 				B5292709240998CC0070DBAB /* Assets.xcassets */,
 				B529270B240998CC0070DBAB /* LaunchScreen.storyboard */,
 				B529270E240998CC0070DBAB /* Info.plist */,
@@ -99,10 +105,40 @@
 		B5292716240998CC0070DBAB /* GoodTimesTests */ = {
 			isa = PBXGroup;
 			children = (
-				B5292717240998CC0070DBAB /* GoodTimesTests.swift */,
+				B5292717240998CC0070DBAB /* AppDelegateTests.swift */,
+				B5A91ADE241191AE00F85D14 /* Coordinators */,
 				B5292719240998CC0070DBAB /* Info.plist */,
 			);
 			path = GoodTimesTests;
+			sourceTree = "<group>";
+		};
+		B5A91ADB2411918000F85D14 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B529272224099A020070DBAB /* Coordinator.swift */,
+				B529272424099A0E0070DBAB /* Router.swift */,
+				B5A91AE32411999400F85D14 /* AppCoordinator.swift */,
+				B5A91AE12411991500F85D14 /* ModalNavigationRouter.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B5A91ADD2411919000F85D14 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5292706240998CA0070DBAB /* Main.storyboard */,
+				B5292704240998CA0070DBAB /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B5A91ADE241191AE00F85D14 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B5A91AD92411916B00F85D14 /* MockAppCoordinator.swift */,
+				B5A91ADF2411921600F85D14 /* MockRouter.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,9 +244,11 @@
 			files = (
 				B529272324099A020070DBAB /* Coordinator.swift in Sources */,
 				B5292705240998CA0070DBAB /* ViewController.swift in Sources */,
+				B5A91AE22411991500F85D14 /* ModalNavigationRouter.swift in Sources */,
 				B529272524099A0E0070DBAB /* Router.swift in Sources */,
 				B5292701240998CA0070DBAB /* AppDelegate.swift in Sources */,
 				B5292703240998CA0070DBAB /* SceneDelegate.swift in Sources */,
+				B5A91AE42411999400F85D14 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5292718240998CC0070DBAB /* GoodTimesTests.swift in Sources */,
+				B5A91AE02411921600F85D14 /* MockRouter.swift in Sources */,
+				B5A91ADA2411916B00F85D14 /* MockAppCoordinator.swift in Sources */,
+				B5292718240998CC0070DBAB /* AppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
